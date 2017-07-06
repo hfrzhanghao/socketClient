@@ -142,7 +142,7 @@ public class HttpRequest {
 		//用于本机
 		//PropertyConfigurator.configure("C:/Users/Dell/log4j.properties");
 		//用于服务器
-		//PropertyConfigurator.configure("D:/msgWarnning/log4j.properties");
+		PropertyConfigurator.configure("D:/msgWarnning/log4j.properties");
 		final long timeInterval = 60000;
 		
 		// 定时发送请求，检测统计模块是否正常
@@ -187,7 +187,7 @@ public class HttpRequest {
 			public void run() {
 				while (true) {
 					// 日志发送地址
-					String url = "http://103.25.23.85:809/reportFlashMsg";
+					String url = "http://103.25.23.85:8088/reportFlashMsg";
 					
 					//组装日志xml文件
 					StringBuffer str = new StringBuffer();
